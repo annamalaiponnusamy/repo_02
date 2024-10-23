@@ -1,0 +1,12 @@
+name: Another Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  my-remote-job:
+   runs-on: ubuntu-latest
+   steps:
+      - name: Invoke workflow and scrap output
+        run: 
+         echo "Hello world!"
