@@ -7,3 +7,11 @@ jobs:
       - run: echo "Triggering Wokflow 2"
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Test         
+        run: |
+          
+          curl -X POST https://api.github.com/repos/annamalaiponnusamy/repo_01/dispatches \
+          -H 'Accept: application/vnd.github.everest-preview+json' \
+          -u ${{ secrets.ACTIONS_KEY }} \
+          --data '{"event_type": "Trigger Workflow1", "client_payload": { "repository": "'${{ github.event.inputs.workflow_02 }}'" }}'
+      
