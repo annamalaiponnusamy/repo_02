@@ -7,7 +7,7 @@ jobs:
   my-remote-job:
    runs-on: ubuntu-latest
    steps:
-      - name: Invoke workflow and scrap output
+      - name: scrapoutput
         run: 
          echo "Hello world!"
          echo "::set-output name=response::Processed data"
