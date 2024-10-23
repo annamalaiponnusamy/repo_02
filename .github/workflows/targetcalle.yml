@@ -9,5 +9,4 @@ jobs:
    steps:
       - name: scrapoutput
         run: 
-         echo "Hello world!"
-         echo "::set-output name=response::Processed data"
+         echo "winsip3upsuccess"        
