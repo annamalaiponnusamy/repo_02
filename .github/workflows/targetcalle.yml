@@ -10,3 +10,4 @@ jobs:
       - name: Invoke workflow and scrap output
         run: 
          echo "Hello world!"
+         echo "::set-output name=response::Processed data"
