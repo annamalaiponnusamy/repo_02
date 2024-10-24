@@ -5,8 +5,10 @@ on:
 
 jobs:
   my-remote-job:
+   outputs:
+      logoutput: ${{ steps.logstep.outputs.log }}
    runs-on: ubuntu-latest
    steps:
-      - name: scrapoutput
-        run: 
-         echo "annamalai"        
+      - name: Conclussion step that can handle the result
+        id: conclusionstep        
+        run:  echo "log=annamalai" >> $GITHUB_OUTPUT
