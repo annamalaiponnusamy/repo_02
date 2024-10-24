@@ -9,4 +9,4 @@ jobs:
    steps:
       - name: scrapoutput
         run: 
-         echo "winsip3upsuccess"        
+         echo "winsip3upsuccess-fail"        
