@@ -10,5 +10,8 @@ jobs:
    runs-on: ubuntu-latest
    steps:
       - name: Conclussion step that can handle the result
-        id: conclusionstep        
+        id: stepid        
         run:  echo "log=annamalai" >> $GITHUB_OUTPUT
+        
+      - name: Use prior output
+        run: echo "The log was ${{ steps.stepid.outputs.log }}"
