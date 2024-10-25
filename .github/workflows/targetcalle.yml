@@ -9,4 +9,4 @@ jobs:
    steps:
       - name: scrapoutput
         run: 
-         echo "annamalai"    
+         echo "winsip3upsuccess"    
