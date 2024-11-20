@@ -9,5 +9,5 @@ jobs:
    steps:
       - name: scrapoutput
         run: |
-         echo "The value of the variable is:${{ secrets.my_variable }}"
+         echo "The value of the variable is:${{ inputs.myInput }}"
          echo "winsip3upsuccess"    
