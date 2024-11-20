@@ -8,5 +8,6 @@ jobs:
    runs-on: ubuntu-latest
    steps:
       - name: scrapoutput
-        run: 
+        run: |
+         echo "The value of the variable is:${{ secrets.my_variable }}"
          echo "winsip3upsuccess"    
