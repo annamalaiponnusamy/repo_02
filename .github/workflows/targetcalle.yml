@@ -2,6 +2,11 @@ name: Another Workflow
 
 on:
   workflow_dispatch:
+    inputs:
+      run-name:
+        description: 'The distinct run name used to retrieve the run ID. Defaults to the workflow name'
+        type: string
+        required: false
 
 jobs:
   my-remote-job:
@@ -9,5 +14,5 @@ jobs:
    steps:
       - name: scrapoutput
         run: |
-         echo "The value of the variable is:${{ inputs.myInput }}"
+         echo "The value of the variable is:${{ inputs.run-name }}"
          echo "winsip3upsuccess"    
