@@ -11,8 +11,12 @@ on:
 jobs:
   my-remote-job:
    runs-on: ubuntu-latest
+   outputs:
+      job-status: ${{ steps.joboutputstep.outputs.runid }} 
    steps:
       - name: scrapoutput
+      - id: joboutputstep
         run: |
          echo "The value of the variable is:${{ inputs.run-name }}"
          echo "winsip3upsuccess"    
+         echo "::set-output name=runid::12"
