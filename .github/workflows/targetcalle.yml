@@ -15,7 +15,7 @@ jobs:
       job-status: ${{ steps.joboutputstep.outputs.runid }} 
    steps:
       - name: scrapoutput
-      - id: joboutputstep
+        id: joboutputstep
         run: |
          echo "The value of the variable is:${{ inputs.run-name }}"
          echo "winsip3upsuccess"    
