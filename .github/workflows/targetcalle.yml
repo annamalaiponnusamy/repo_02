@@ -13,12 +13,7 @@ on:
 jobs:
  example_job:
     name: Generate output
-    runs-on: ubuntu-latest
-    # Map the job outputs to step outputs
-    outputs:
-      output1: ${{ steps.step1.outputs.firstword }}
-      output2: ${{ steps.step2.outputs.secondword }}
-      workflow-id: ${{ steps.step3.outputs.workflow-id }}
+    runs-on: ubuntu-latest   
     steps:
       - id: step1
         run: echo "firstword=hello" >> $GITHUB_OUTPUT
