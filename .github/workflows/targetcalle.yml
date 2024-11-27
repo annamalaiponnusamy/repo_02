@@ -4,16 +4,7 @@ name: Another Workflow
 on:
   workflow_call:
     # Map the workflow outputs to job outputs
-    outputs:
-      firstword:
-        description: "The first output string"
-        value: ${{ jobs.example_job.outputs.output1 }}
-      secondword:
-        description: "The second output string"
-        value: ${{ jobs.example_job.outputs.output2 }}
-      workflow-id:
-        description: "The second output string"
-        value: ${{ jobs.example_job.outputs.workflow-id }}
+    
   workflow_dispatch:
     inputs:
       run-name:
@@ -26,24 +17,9 @@ jobs:
     name: Generate output
     runs-on: ubuntu-latest
     # Map the job outputs to step outputs
-    outputs:
-      output1: ${{ steps.step1.outputs.firstword }}
-      output2: ${{ steps.step2.outputs.secondword }}
-      workflow-id: ${{ steps.step3.outputs.workflow-id }}
+    
     steps:
       - id: step1
-        run: echo "firstword=hello" >> $GITHUB_OUTPUT
-      - id: step2
-        run: echo "secondword=world" >> $GITHUB_OUTPUT
-      - id: step3
-        run: echo "workflow-id=100" >> $GITHUB_OUTPUT
-        
- job2:
-    runs-on: ubuntu-latest
-    needs: example_job    
-    steps:      
-      - run: |          
-          echo ${{ needs.example_job.outputs.output1 }}
-          echo ${{ needs.example_job.outputs.output2 }}
-
-          echo ${{ needs.example_job.outputs.firstword }}
+        run: echo "global-runid=hello"
+      
+ 
