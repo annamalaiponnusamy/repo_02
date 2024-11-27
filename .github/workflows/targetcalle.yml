@@ -33,4 +33,8 @@ jobs:
           script: |
             const id = 'runid100'
             core.setOutput('id', id)
-      - run: echo "${{steps.get-id.outputs.id}}"
+            core.setOutput('workflow-id',id)
+      - run: |
+            echo "${{steps.get-id.outputs.id}}"
+            echo "${{steps.get-id.outputs.workflow-id}}"
+
