@@ -20,6 +20,6 @@ jobs:
     
     steps:
       - id: step1
-        run: echo "global-runid=hello"
+        run: echo "^RunId1^"
       
  
