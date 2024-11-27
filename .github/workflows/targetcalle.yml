@@ -34,7 +34,9 @@ jobs:
             const id = 'runid100'
             core.setOutput('id', id)
             core.setOutput('workflow-id',id)
+            core.exportVariable("ID_TOKEN", id);
       - run: |
             echo "${{steps.get-id.outputs.id}}"
             echo "${{steps.get-id.outputs.workflow-id}}"
+            echo ${{ env.ID_TOKEN }}
 
