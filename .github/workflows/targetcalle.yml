@@ -19,6 +19,11 @@ jobs:
     steps:
       - id: step1
         run: |
-          str = "RunId10"
-          echo "${str}"            
+          foo="RUNID-10"
+          MY_NUMBER=42
+         
+          # Use the variables
+          echo "x${foo}y"
+          echo "Variable 2: $MY_NUMBER"
+                 
     
