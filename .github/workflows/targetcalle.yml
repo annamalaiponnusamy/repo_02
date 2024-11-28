@@ -20,5 +20,5 @@ jobs:
       - id: step1
         run: |
           str = "RunId10"
-          echo "x $str y"            
+          echo "$str"            
      
