@@ -19,5 +19,6 @@ jobs:
     steps:
       - id: step1
         run: |
-          echo "xRunId1y"            
+          str = "RunId10"
+          echo "x$stry"            
      
