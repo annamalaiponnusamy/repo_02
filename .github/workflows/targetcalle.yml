@@ -19,6 +19,6 @@ jobs:
     steps:
       - id: step1
         run: |
-          $str = 'RunId10'
+          str = 'RunId10'
           echo "$str"            
      
