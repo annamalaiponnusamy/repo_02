@@ -19,11 +19,8 @@ jobs:
     steps:
       - id: step1
         run: |
-          foo="RUNID-10"
-          MY_NUMBER=42
-         
-          # Use the variables
+          foo="RUNID-10"    
           echo "x${foo}y"
-          echo "Variable 2: $MY_NUMBER"
+         
                  
     
