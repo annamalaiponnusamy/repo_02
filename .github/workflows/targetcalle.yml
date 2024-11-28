@@ -20,5 +20,12 @@ jobs:
     steps:
       - id: step1
         run: |
-          echo "xRunId1y"      
+          echo "xRunId1y"  
           
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.ACTIONS_KEY }} 
+          repository: annamalaiponnusamy/repo_01
+          event-type: my-event
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
