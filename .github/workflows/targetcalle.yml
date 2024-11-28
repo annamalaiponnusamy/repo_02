@@ -19,8 +19,7 @@ jobs:
     steps:
       - id: step1
         run: |
-          foo="RUNID-10"    
-          echo "x${foo}y"
+          echo "xRUNID-10y"
          
                  
     
