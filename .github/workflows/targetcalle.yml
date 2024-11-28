@@ -16,6 +16,7 @@ jobs:
  example_job:
     name: Generate output
     runs-on: ubuntu-latest
+    if: github.event.action != 'Trigger Workflow1'
     steps:
       - id: step1
         run: |
