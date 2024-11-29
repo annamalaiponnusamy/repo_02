@@ -19,7 +19,8 @@ jobs:
     steps:
       - id: step1
         run: |
-          echo "xRUNID-10y"
+          echo "automationsuccess"
+          echo "XRunId10Y"
          
                  
     
