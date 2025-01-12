@@ -22,11 +22,11 @@ jobs:
           echo "automationsuccess"
           echo "XRunId10Y"
            $splitRunIdWithDate = ""
-           if [ "${{(splitRunIdWithDate[0] != '')}}" ]; then
-           echo "pass"            
-           else
-           echo "fail"
-             exit 1
-           fi      
-                 
+           my_variable=" " 
+            if [ -z "${my_variable}" ]; then
+              echo "Variable is empty"
+            else
+              echo "Variable is not empty"
+            fi    
+                     
     
