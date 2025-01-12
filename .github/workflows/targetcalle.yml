@@ -21,12 +21,12 @@ jobs:
         run: |
           echo "automationsuccess"
           echo "XRunId10Y"
-          $splitRunIdWithDate = ""
-          if [ -n "${splitRunIdWithDate}" ]; then
-          echo "pass"
-          else
-          echo "fail"
-          exit 1 
-          fi
+           splitRunIdWithDate = ""
+           if [ "${{(splitRunIdWithDate[0] != '')}}" ]; then
+           echo "pass"            
+           else
+           echo "fail"
+             exit 1
+           fi      
                  
     
