@@ -21,12 +21,13 @@ jobs:
         run: |
           echo "automationsuccess"
           echo "XRunId10Y"
-           $splitRunIdWithDate = ""
-           my_variable="tes" 
-            if [ -z "${my_variable}" ]; then
-              echo "Variable is empty"
-            else
-              echo "Variable is not empty"
-            fi    
+      - name: Check if another variable is empty
+        run: |
+          empty_variable="dd"
+          if [ -z "${empty_variable}" ]; then
+            echo "Variable is empty"
+          else
+            echo "Variable is not empty"
+          fi       
                      
     
