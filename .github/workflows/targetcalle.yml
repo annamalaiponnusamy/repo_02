@@ -22,7 +22,7 @@ jobs:
           echo "automationsuccess"
           echo "XRunId10Y"
            $splitRunIdWithDate = ""
-           my_variable=" " 
+           my_variable="tes" 
             if [ -z "${my_variable}" ]; then
               echo "Variable is empty"
             else
