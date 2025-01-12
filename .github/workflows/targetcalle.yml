@@ -22,7 +22,7 @@ jobs:
           echo "automationsuccess"
           echo "XRunId10Y"
            splitRunIdWithDate = ""
-           if [ "${{(splitRunIdWithDate[0] != '')}}" ]; then
+           if [ "${{($splitRunIdWithDate[0] != '')}}" ]; then
            echo "pass"            
            else
            echo "fail"
