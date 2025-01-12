@@ -28,7 +28,7 @@ jobs:
 
       - name: Check if another variable is empty
         run: |
-               if [ -z "${steps.s3run.outputs.response-output1}" ]; then
+               if [ -z "${{ steps.s3run.outputs.response-output1 }}" ]; then
                  echo "Variable is empty"
                  exit 1
                else
