@@ -21,13 +21,19 @@ jobs:
         run: |
           echo "automationsuccess"
           echo "XRunId10Y"
+      - name: Get Run ID From S3 Object
+        id: s3run
+        run: |
+           echo "response-output1=pass" >> $GITHUB_OUTPUT 
+
       - name: Check if another variable is empty
         run: |
-          empty_variable="dd"
-          if [ -z "${empty_variable}" ]; then
-            echo "Variable is empty"
-          else
-            echo "Variable is not empty"
-          fi       
+               if [ -z "${steps.s3run.outputs.response-output1}" ]; then
+                 echo "Variable is empty"
+                 exit 1
+               else
+                 echo "Variable is not empty"
+               fi
+               
                      
     
