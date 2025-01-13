@@ -15,7 +15,9 @@ on:
 jobs:
  example_job:
     name: Generate output
-    runs-on: ubuntu-latest   
+    runs-on: ubuntu-latest 
+    outputs:
+     jobclusterstatus: "test"
     steps:
       - id: step1
         run: |
