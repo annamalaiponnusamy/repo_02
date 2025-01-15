@@ -27,6 +27,7 @@ jobs:
         id: s3run
         run: |
            echo "response-output1=pass" >> $GITHUB_OUTPUT 
+           echo "::set-output name=my-step-output::Some output value" 
 
       - name: Check if another variable is empty
         run: |
