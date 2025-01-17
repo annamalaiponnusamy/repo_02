@@ -22,7 +22,7 @@ jobs:
       - id: step1
         run: |
           echo "automationsuccess"
-          echo "XRunId10Y"
+           
       - name: Get Run ID From S3 Object
         id: s3run
         run: |
