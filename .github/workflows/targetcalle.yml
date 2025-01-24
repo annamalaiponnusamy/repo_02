@@ -21,7 +21,7 @@ jobs:
     steps:
       - id: step1
         run: |
-          echo "{{inputs.run-name}}"
+          echo "${{inputs.run-name}}"
            
       - name: Get Run ID From S3 Object
         id: s3run
