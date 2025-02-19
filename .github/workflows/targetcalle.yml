@@ -13,13 +13,12 @@ on:
         required: false
 
 jobs:
- example_job:
-    name: Generate output
+ example_job:    
     runs-on: ubuntu-latest 
     outputs:
      jobclusterstatus: ${{ steps.s3run.outputs.response-output1 }}
     steps:
-       
+      - name: OutputStep 
       - id: step1
         run: |
           echo "10000,18,6" 
