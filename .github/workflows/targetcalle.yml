@@ -2,6 +2,7 @@
 name: Another Workflow
 
 on:
+  
   workflow_call:
     # Map the workflow outputs to job outputs
     
@@ -11,7 +12,9 @@ on:
         description: 'The distinct run name used to retrieve the run ID. Defaults to the workflow name'
         type: string
         required: false
-
+permissions:
+    actions: read
+    contents: read
 jobs:
  example_job:    
     runs-on: ubuntu-latest 
@@ -25,6 +28,7 @@ jobs:
            
       - name: GetRunIDFromS3Object
         id: s3run
+         
         run: |
            echo "response-output1=pass" >> $GITHUB_OUTPUT 
            echo "::set-output name=my-step-output::Some output value" 
