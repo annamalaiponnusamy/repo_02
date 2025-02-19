@@ -19,7 +19,7 @@ jobs:
      jobclusterstatus: ${{ steps.s3run.outputs.response-output1 }}
     steps:
       - name: OutputStep 
-      - id: step1
+        id: step1
         run: |
           echo "10000,18,6" 
            
