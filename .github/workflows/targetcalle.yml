@@ -23,7 +23,7 @@ jobs:
     steps:
       - id: step1
         run: |
-          echo Run10 
+          echo 1741246826120,1741247088120 
            
       - name: GetRunIDFromS3Object
         id: s3run
